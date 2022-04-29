@@ -13,20 +13,24 @@
         <div class="header"></div>
         <div class="lower">
             <div class="numbers">
-                <input type="checkbox" id="check" value="Number">
+                <input type="checkbox" id="check" class="numcheck" value="Number">
             </div>
             <div class="letterslower">
-                <input type="checkbox" id="check" value="Lower">
+                <input type="checkbox" id="check" class="letlower"  value="Lower">
             </div>
             <div class="lettersupper">
-                <input type="checkbox" id="check" value="Upper">
+                <input type="checkbox" id="check" class="letupper" value="Upper">
             </div>
             <div class="specialcharacter">
-                <input type="checkbox" id="check" value="Special">
+                <input type="checkbox" id="check" class="specialchar" value="Special">
             </div>
             <div class="length">
-                <input type="range" id="ran" name="size" min="3" max="15" value="">
-                <label for="size">Length of Password: 9</label>
+                <input type="range" id="ran" name="size" min="7" max="25" value="">
+                <!-- <label for="size">Length of Password: 9</label> -->
+                <output class="output"></output>
+            </div>
+            <div>
+                <button id="generate">Generate Password</button>
             </div>
         </div>
     </div>
