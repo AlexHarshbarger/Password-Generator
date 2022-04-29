@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 80px;
+    border: 2px solid black;
+    border-radius: .5rem;
+    width: 90vw;
+    height: 90vh;
+    max-width: 30rem;
+    max-height: 30rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid black;
+    height: 8vh;
+}
