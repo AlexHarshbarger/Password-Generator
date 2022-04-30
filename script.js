@@ -9,20 +9,23 @@ const output = document.querySelector('.output');
 // const lowerStr = "abcdefghijklmnopqrstuvwxyz";
 // const upperStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 // const numberStr = "0123456789";
-// const specialStr = "!()*+,-./:;<=>?'@[]^_`{|}~"
+// const specialStr = "!()*+,-./:;?'@[]^_`{|}~"
 
-const characters = "!()*+,-./:;<=>?'@[]^_`{|}~0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const characters = "!()*+,-./:;?='@[]^_`{|}~0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 output.innerHTML = "Length of Password: " + 16;
 
 range.addEventListener('input', function () {
-    output.innerHTML = "Length of Password:  " + range.value;
+    output.innerHTML = "Length of Password: " + range.value;
 }, false);
 
 generate.onclick = () => {
     let password = "";
     for (let i = 0; i <= range.value - 1; i++) {
         password += characters.charAt(Math.floor(Math.random() * characters.length));
+        console.log(password)
     }
+    if (password.length < range.value) {return}
     header.innerHTML = password;
+    console.log(password.length)
 }
 
