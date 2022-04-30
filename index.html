@@ -13,19 +13,40 @@
         <div class="header"></div>
         <div class="lower">
             <div class="numbers">
-                <input type="checkbox" id="check" class="numcheck" value="Number">
+                <label><input type="checkbox" id="check" class="numcheck" value="Number">Numbers</label>
             </div>
             <div class="letterslower">
-                <input type="checkbox" id="check" class="letlower"  value="Lower">
+                <label><input type="checkbox" id="check" class="letlower"  value="Lower">Lower Case Letters</label>
             </div>
             <div class="lettersupper">
-                <input type="checkbox" id="check" class="letupper" value="Upper">
+                <label><input type="checkbox" id="check" class="letupper" value="Upper">Upper Case Letters</label>
             </div>
             <div class="specialcharacter">
-                <input type="checkbox" id="check" class="specialchar" value="Special">
+                <label><input type="checkbox" id="check" class="specialchar" value="Special">Special Characters</label>
             </div>
             <div class="length">
-                <input type="range" id="ran" name="size" min="7" max="25" value="">
+                <input type="range" list="tickmarks" id="ran" name="size" min="7" max="25" value="">
+                <datalist id="tickmarks">
+                    <option value="7"></option>
+                    <option value="8"></option>
+                    <option value="9"></option>
+                    <option value="10"></option>
+                    <option value="11"></option>
+                    <option value="12"></option>
+                    <option value="13"></option>
+                    <option value="14"></option>
+                    <option value="15"></option>
+                    <option value="16"></option>
+                    <option value="17"></option>
+                    <option value="18"></option>
+                    <option value="19"></option>
+                    <option value="20"></option>
+                    <option value="21"></option>
+                    <option value="22"></option>
+                    <option value="23"></option>
+                    <option value="24"></option>
+                    <option value="25"></option>
+                </datalist>
                 <!-- <label for="size">Length of Password: 9</label> -->
                 <output class="output"></output>
             </div>
