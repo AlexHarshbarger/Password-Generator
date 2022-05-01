@@ -23,7 +23,7 @@ generate.onclick = () => {
     isChecked(numCheck, letLower, letUpper, specialChar)
     for (let i = 0; i <= range.value - 1; i++) {
         password += characters.charAt(Math.floor(Math.random() * characters.length));
-        console.log(password)
+        console.log(characters)
     }
     if (password.length < range.value) {return}
     header.innerHTML = password;
@@ -31,7 +31,9 @@ generate.onclick = () => {
 }
 
 function isChecked(a, b, c, d) {
-    if (a.checked && !b.checked && !c.checked && !d.checked) {
+    if (!a.checked && !b.checked && !c.checked && !d.checked){
+        return characters;
+    } else if (a.checked && !b.checked && !c.checked && !d.checked) {
         return characters = numberStr;
     } else if (!a.checked && b.checked && !c.checked && !d.checked) {
         return characters = lowerStr;
@@ -59,6 +61,8 @@ function isChecked(a, b, c, d) {
         return characters = numberStr + upperStr + specialStr;
     } else if (!a.checked && b.checked && c.checked && d.checked) {
         return characters = lowerStr + upperStr + specialStr;
+    } else if (a.checked && b.checked && c.checked && d.checked) {
+        return characters = numberStr + lowerStr + upperStr + specialStr
     }
 }
 
